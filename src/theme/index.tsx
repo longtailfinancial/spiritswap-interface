@@ -32,7 +32,7 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
 ) as any
 
 const white = '#FFFFFF'
-const black = '#000000'
+const black = '#161616'
 
 export function colors(darkMode: boolean): Colors {
   return {
@@ -48,7 +48,7 @@ export function colors(darkMode: boolean): Colors {
     text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
     // backgrounds / greys
-    bg1: darkMode ? '#212429' : '#FFFFFF',
+    bg1: darkMode ? '#161616' : '#FFFFFF',
     bg2: darkMode ? '#2C2F36' : '#F7F8FA',
     bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
@@ -59,31 +59,31 @@ export function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#ff007a',
-    primary2: darkMode ? '#3680E7' : '#FF8CC3',
-    primary3: darkMode ? '#4D8FEA' : '#FF99C9',
-    primary4: darkMode ? '#376bad70' : '#F6DDE8',
-    primary5: darkMode ? '#153d6f70' : '#FDEAF1',
+    primary1: darkMode ? '#00e5b9' : '#edc10c',
+    primary2: darkMode ? '#00ccac' : '#ecaf00',
+    primary3: darkMode ? '#00b49e' : '#ea9d00',
+    primary4: darkMode ? '#009c8e' : '#e68c03',
+    primary5: darkMode ? '#09847d' : '#e17a0c',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#ff007a',
+    primaryText1: darkMode ? '#161616' : '#fff',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
-    secondary2: darkMode ? '#17000b26' : '#F6DDE8',
-    secondary3: darkMode ? '#17000b26' : '#FDEAF1',
+    secondary1: darkMode ? '#13ba9f' : '#edc10c',
+    secondary2: darkMode ? '#0e9f8e' : '#e68c03',
+    secondary3: darkMode ? '#09847d' : '#e17a0c',
 
     // other
     red1: '#FF6871',
     red2: '#F82D3A',
-    green1: '#27AE60',
-    yellow1: '#FFE270',
-    yellow2: '#F3841E',
-    blue1: '#2172E5'
+    green1: '#00e5b9',
+    yellow1: '#edc10c',
+    yellow2: '#e17a0c',
+    blue1: '#2876bf'
 
     // dont wanna forget these blue yet
-    // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
-    // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
+    // blue4: darkMode ? '#153d6f' : '#C4D9F8',
+    // blue5: darkMode ? '#153d6f' : '#EBF4FF',
   }
 }
 
@@ -98,7 +98,7 @@ export function theme(darkMode: boolean): DefaultTheme {
     },
 
     //shadows
-    shadow1: darkMode ? '#000' : '#2F80ED',
+    shadow1: darkMode ? '#161616' : '#2F80ED',
 
     // media queries
     mediaWidth: mediaWidthTemplates,
@@ -226,7 +226,7 @@ body {
   background-position: 0 -30vh;
   background-repeat: no-repeat;
   background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.9, theme.primary1)} 0%, ${transparentize(
+    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.5, theme.primary1)} 0%, ${transparentize(
       1,
       theme.bg1
     )} 100%)`};
